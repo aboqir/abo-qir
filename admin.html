@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة مبيعات السمك</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>إدارة مبيعات السمك</h1>
+        <div id="passwordSection">
+            <h2>تسجيل الدخول</h2>
+            <label for="password">كلمة المرور:</label>
+            <input type="password" id="password">
+            <button onclick="checkPassword()">دخول</button>
+            <p id="passwordMessage" class="error"></p>
+        </div>
+
+        <div id="adminContent" style="display:none;">
+            <h2>قائمة الأوردرات</h2>
+            <table id="ordersList">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>اسم الموظف</th>
+                        <th>نوع السمك</th>
+                        <th>الكمية</th>
+                        <th>الوحدة</th>
+                        <th>وقت البيع</th>
+                        <th>الرقم اليدوي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <button onclick="deleteSelectedOrders()">مسح المحدد</button>
+            <button onclick="deleteAllOrders()">مسح الكل</button>  <h2>ملخص المبيعات اليومي</h2>
+            <table id="dailySummary">
+                <thead>
+                    <tr>
+                        <th>اسم الموظف</th>
+                        <th>إجمالي المبيعات (بالكيلو)</th>
+                        <th>إجمالي المكافآت (بالجنيه)</th>
+                        <th>الأرقام اليدوية</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+
+            <h2>تقرير المبيعات المفصل</h2>
+            <table id="detailedReport">
+                <thead>
+                    <tr>
+                        <th>اسم الموظف</th>
+                        <th>نوع السمك</th>
+                        <th>الكمية</th>
+                        <th>الوحدة</th>
+                        <th>وقت البيع</th>
+                        <th>المكافأة (بالجنيه)</th>
+                        <th>الرقم اليدوي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+
+            <h2>خيارات الإجراءات والتقارير</h2>
+            <button onclick="exportToExcel()">تصدير إلى Excel</button>
+            <button onclick="printReport()">طباعة التقرير</button>
+            <button onclick="endOfDayReport()">انتهاء الوردية</button>
+        </div>
+        <p><a href="index.html">صفحة تسجيل المبيعات</a></p>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل مبيعات السمك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تسجيل مبيعات السمك</h1>
+        <form id="salesForm">
+            <label for="employeeName">اسم الموظف:</label><br>
+            <select id="employeeName" name="employeeName">
+                <option value="علاء">علاء</option>
+                <option value="صالح">صالح</option>
+                <option value="فرغلي">فرغلي</option>
+                <option value="خليفة">خليفة</option>
+            </select><br><br>
+            <label for="fishType">نوع السمك:</label><br>
+            <select id="fishType" name="fishType">
+                <option value="مرجان">مرجان</option>
+                <option value="سبيط">سبيط</option>
+                <option value="استاكوزا">استاكوزا</option>
+                <option value="تعبان">تعبان</option>
+                <option value="موسى">موسى</option>
+                <option value="سھلیة">سھلیة</option>
+                <option value="بربوني">بربوني</option>
+                <option value="ناجل">ناجل</option>
+                <option value="فسيخ">فسيخ</option>
+                <option value="رنجة سليمة">رنجة سليمة</option>
+                <option value="رنجة مخلية">رنجة مخلية</option>
+                <option value="دينيس">دينيس</option>
+                <option value="قاروص">قاروص</option>
+                <option value="سلمون">سلمون</option>
+                <option value="لوت">لوت</option>
+                <option value="قشر بياض">قشر بياض</option>
+                <option value="جمبري 800 لحم">جمبري 800 لحم</option>
+                <option value="جمبري 850">جمبري 850</option>
+                <option value="كفتة">كفتة</option>
+                <option value="بطارخ">بطارخ</option>
+                <option value="جمبري 800 قشر">جمبري 800 قشر</option>
+                <option value="شعور">شعور</option>
+            </select><br><br>
+             <label for="manualNumber">الرقم اليدوي:</label><br>
+            <input type="text" id="manualNumber" name="manualNumber"><br><br>
+
+            <label for="quantity">الكمية (بالكيلو أو بالجرام):</label><br>
+            <input type="number" id="quantity" name="quantity" step="0.01"><br><br>
+            <label for="unit">الوحدة:</label><br>
+            <select id="unit" name="unit">
+                <option value="كيلو">كيلو</option>
+                <option value="جرام">جرام</option>
+            </select><br><br>
+            <button type="button" onclick="saveSale()">تسجيل البيع</button>
+            <p id="message"></p>
+        </form>
+        <p><a href="admin.html">صفحة الإدارة</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
